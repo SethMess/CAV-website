@@ -1,0 +1,81 @@
+.orange-cool{
+    background-color: #FFA500; 
+    color: #FFFFFF;
+    border: 2px solid #ff8c;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    font-family: "Lucida Console", Courier, monospace;
+    width: 1200px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .orange-cool:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+ }
+ .orange-cool a {
+    color: #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px dashed #FFFFFF;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+ }
+ .orange-cool a:hover {
+    color: #FFD700;
+    border-bottom: 1px solid #FFD700;
+ }
+ .blue-cool {
+    background-color: #7ecae4;
+    color: #333;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-family: "Lucida Console", Courier, monospace;
+    width: 1200px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .blue-cool:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+ }
+ .blue-cool a {
+    color: #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px dashed #FFFFFF;
+    transition: color 0.3s ease, border-bottom 0.3s;
+ }
+ .blue-cool a:hover{
+    color: #FFD700;
+    border-bottom: 1px solid #FFD700;
+ }
+ .red-cool {
+    background-color: #e93333;
+    color: #333;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-family: "Lucida Console", Courier, monospace;
+    width: 1200px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .red-cool:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+ }
+ .red-cool a {
+    color: #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px dashed #FFFFFF;
+    transition: color 0.3s ease, border-bottom 0.3s;
+ }
+ .red-cool a:hover{
+    color: #FFD700;
+    border-bottom: 1px solid #FFD700;
+ }
