@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/teams.css">
+    <title>Teams - CAV Club</title>
+
+</head>
+
+<body>
+    <header id="header-placeholder">
+        <!-- Header will be loaded here -->
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Teams - CAV Club</h2>
+            <p>Here you can find information about our different teams</p>
+        </section>
+        <section class="tabs">
+            <div class="tab active" onclick="showTab('racing')">Racing Teams</div>
+            <div class="tab" onclick="showTab('connected')">Connected Vehicles Team</div>
+            <div class="tab" onclick="showTab('vision')">Computer Vision Team</div>
+        </section>
+        <section class="content">
+            <div id="racing" class="tab-content active">
+                <h3>Racing Teams</h3>
+                <p>Information about the Racing Teams...</p>
+            </div>
+            <div id="connected" class="tab-content">
+                <h3>Connected Vehicles Team</h3>
+                <p>Information about the Connected Vehicles Team...</p>
+            </div>
+            <div id="vision" class="tab-content">
+                <h3>Computer Vision Team</h3>
+                <p>Information about the Computer Vision Team...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 University of Victoria - ECE Department</p>
+    </footer>
+    <script src="../js/loadHeader.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        function showTab(tabId) {
+            var contents = document.getElementsByClassName('tab-content');
+            var tabs = document.getElementsByClassName('tab');
+
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active');
+            }
+
+            for (var j = 0; j < tabs.length; j++) {
+                tabs[j].classList.remove('active');
+            }
+
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

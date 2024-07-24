@@ -1,0 +1,25 @@
+/* Add some basic styles for the tabs */
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    margin-right: 0px;
+    margin-left: 2px;
+}
+
+.tab.active {
+    background-color: #003366;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    /* border-top: none; */
+}
+
+.tab-content.active {
+    display: block;
+}

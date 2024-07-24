@@ -12,6 +12,7 @@ function loadHeader() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
+            // headerPlaceholder.style.visibility = 'show'; // Show header once loaded
         })
         .catch(error => console.error('Error loading header:', error));
 }
