@@ -30,8 +30,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    border: 1px solid white;
+    padding: 0.5rem;
 }
 
 .hero {
