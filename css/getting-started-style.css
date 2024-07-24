@@ -79,3 +79,26 @@
     color: #FFD700;
     border-bottom: 1px solid #FFD700;
  }
+ .dropdown-content {
+   display: none;
+   background-color: #FFF;
+   color: #000;
+   padding: 10px;
+   border: 2px solid #FFD700;
+   font-size: 14px;
+   margin-top: 10px;
+   left: 0;
+   width: 100%; /* Full width of the parent */
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /*Shadow effect */
+
+ }
+
+ .orange-cool:hover .dropdown-content,
+ .blue-cool:hover .dropdown-content,
+ .red-cool:hover .dropdown-content {
+   display: block;
+
+ }
+ li {
+   margin-bottom: 20px; /* no overlap */
+ }
