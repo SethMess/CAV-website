@@ -21,22 +21,31 @@
             <p>Here you can find information about our different teams</p>
         </section>
         <section class="tabs">
-            <div class="tab active" onclick="showTab('racing')">Racing Teams</div>
+            <div class="tab active" onclick="showTab('overview')">Overview</div>
+            <div class="tab" onclick="showTab('racing')">Racing Teams</div>
             <div class="tab" onclick="showTab('connected')">Connected Vehicles Team</div>
             <div class="tab" onclick="showTab('vision')">Computer Vision Team</div>
         </section>
         <section class="content">
-            <div id="racing" class="tab-content active">
-                <h3>Racing Teams</h3>
-                <p>Information about the Racing Teams...</p>
+            <div id="overview" class="tab-content active">
+                <div id="overview-content">
+                    <!-- Overview content will be loaded here -->
+                </div>
+            </div>
+            <div id="racing" class="tab-content">
+                <div id="racing-content">
+                    <!-- Racing Teams content will be loaded here -->
+                </div>
             </div>
             <div id="connected" class="tab-content">
-                <h3>Connected Vehicles Team</h3>
-                <p>Information about the Connected Vehicles Team...</p>
+                <div id="connected-content">
+                    <!-- Connected Vehicles Team content will be loaded here -->
+                </div>
             </div>
             <div id="vision" class="tab-content">
-                <h3>Computer Vision Team</h3>
-                <p>Information about the Computer Vision Team...</p>
+                <div id="vision-content">
+                    <!-- Computer Vision Team content will be loaded here -->
+                </div>
             </div>
         </section>
     </main>
@@ -46,7 +55,17 @@
     </footer>
     <script src="../js/loadHeader.js"></script>
     <script src="../js/script.js"></script>
-    <script>
+    <script src="../js/teams.js"></script>
+    <!-- <script>
+        function loadContent(tabId, contentId) {
+            fetch('content/' + tabId + '.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(contentId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading content:', error));
+        }
+
         function showTab(tabId) {
             var contents = document.getElementsByClassName('tab-content');
             var tabs = document.getElementsByClassName('tab');
@@ -61,8 +80,15 @@
 
             document.getElementById(tabId).classList.add('active');
             event.currentTarget.classList.add('active');
+            document.getElementById(tabId + '-content').classList.add('active');
+            loadContent(tabId, tabId + '-content');
         }
-    </script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let startTab = 'overview';
+            loadContent(startTab, startTab + '-content');  // Load the initial tab content
+        });
+    </script> -->
 </body>
 
 </html>
