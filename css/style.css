@@ -44,6 +44,14 @@ nav ul li a {
     text-align: center;
 }
 
+.main-title {
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    color: black;
+    padding: 2rem;
+    text-align: center;
+}
+
 .content {
     padding: 2rem;
 }

@@ -1,0 +1,4 @@
+<!-- This will contain content in the about section -->
+
+<h3> This is the about section </h3>
+<p>This is all about our club</p>

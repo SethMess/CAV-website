@@ -1,0 +1,6 @@
+<!-- This will contain the main page for the website -->
+<h3>This is where the most important information will be located</h3>
+<p>News</p>
+<p>Upcoming events</p>
+<p>Recent achievements</p>
+<p>etc...</p>

@@ -18,21 +18,25 @@
             <h2>Welcome to the Connected Autonomous Vehicles Club</h2>
             <p>Explore our teams and research.</p>
         </section>
-        <section class="content">
-            <h3>Our Programs</h3>
-            <p>Details about programs...</p>
+        <section class="content" id="main-page">
+            <!-- <h3>Our Programs</h3>
+            <p>Details about programs...</p> -->
         </section>
         <!-- About Section -->
-        <section class="hero">
+        <section class="main-title">
             <h2>About Us - CAV Club</h2>
             <p>Here you can find information about the club</p>
         </section>
-        <section class="content">
-            <h3>Here is where the information about us will go</h3>
-            <p>Details about us...</p>
-            <p>More details about us...</p>
-            <p>Final details about us...</p>
-        </section>
+        <div>
+            <section class="content" id="about">
+
+            </section>
+        </div>
+        <div>
+            <section class="image">
+                <img src="images/f1tenth_car.jpg" alt="A picture of the F1tenth Car" style="width: 50%;">
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -40,6 +44,21 @@
     </footer>
     <script src="js/loadHeader.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('pages/content/index.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('main-page').innerHTML = data;
+                });
+
+            fetch('pages/content/about.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('about').innerHTML = data;
+                });
+        });
+    </script>
 </body>
 
 </html>
