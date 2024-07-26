@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>ECE Department - UVic</title>
+    <link rel="stylesheet" href="css/carousel.css">
+    <title>CAV Club - UVic</title>
 </head>
 
 <body>
@@ -18,6 +19,39 @@
             <h2>Welcome to the Connected Autonomous Vehicles Club</h2>
             <p>Explore our teams and research.</p>
         </section>
+        <div class="carousel-text-container">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="images/f1tenth_car.jpg" alt="Image 1">
+                    <img src="images/f1tenth_car.jpg" alt="Image 2">
+                    <img src="images/f1tenth_car.jpg" alt="Image 3">
+                    <!-- You can add videos as well -->
+                    <video controls>
+                        <source src="videos/gap_following1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <!-- Dots will be dynamically added here -->
+                </div>
+                <div class="carousel-buttons">
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="pause" onclick="togglePlayPause()">&#10073;&#10073;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+                <div class="carousel-controls">
+
+                </div>
+
+            </div>
+            <div class="text-container">
+                <h2>Welcome to Our Carousel</h2>
+                <p>This section can contain any text or content you want to display alongside the carousel.
+                    It could be a description of the images or videos in the carousel, additional information, or even
+                    interactive elements like buttons or links.</p>
+            </div>
+        </div>
         <section class="content" id="main-page">
             <!-- <h3>Our Programs</h3>
             <p>Details about programs...</p> -->
@@ -32,11 +66,6 @@
 
             </section>
         </div>
-        <div>
-            <section class="image">
-                <img src="images/f1tenth_car.jpg" alt="A picture of the F1tenth Car" style="width: 50%;">
-            </section>
-        </div>
     </main>
 
     <footer>
@@ -44,6 +73,7 @@
     </footer>
     <script src="js/loadHeader.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/carousel.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             fetch('pages/content/index.txt')
@@ -52,7 +82,7 @@
                     document.getElementById('main-page').innerHTML = data;
                 });
 
-            fetch('pages/content/about.txt')
+            fetch('pages/content/about.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('about').innerHTML = data;

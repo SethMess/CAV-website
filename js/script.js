@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // JavaScript functionality goes here
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//     // JavaScript functionality goes here
+// });
 
 

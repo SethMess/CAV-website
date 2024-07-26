@@ -1,0 +1,123 @@
+/* Main container for carousel and text */
+.carousel-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    /* Allows wrapping if necessary */
+    gap: 20px;
+    /* Space between carousel and text */
+}
+
+/* Carousel container styling */
+.carousel-container {
+    flex: 1 1 45%;
+    /* Allowing some flexibility in width */
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 300px;
+    /* Minimum width for carousel */
+}
+
+/* Text container styling */
+.text-container {
+    flex: 1 1 45%;
+    padding: 10px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    /* Handle long words */
+    max-width: 45%;
+    /* Set a reasonable maximum width */
+    min-width: 300px;
+    /* Minimum width for text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-text-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carousel-container,
+    .text-container {
+        max-width: 100%;
+    }
+}
+
+/* Styling for the text container */
+.text-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Basic styles for the carousel */
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img,
+.carousel-slide video {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Navigation buttons styling */
+.carousel-buttons,
+.carousel-controls,
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.prev,
+.next,
+.pause {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Fade out effect */
+.carousel-slide img.fade-out,
+.carousel-slide video.fade-out {
+    opacity: 0;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background-color: #0073e6;
+}
+
+.carousel-controls {
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+}
