@@ -56,6 +56,11 @@ nav ul li a {
     padding: 2rem;
 }
 
+.hero p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
 
 footer {
     background-color: #003366;
