@@ -30,7 +30,7 @@
 }
 
 .blue-cool {
-   background-color: #7ecae4;
+   background-color: #0077e6;
    color: #333;
    border: 2px solid #FFD700;
    border-radius: 10px;
@@ -38,8 +38,10 @@
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
    font-family: "Lucida Console", Courier, monospace;
    width: 1200px;
-   margin: 20px auto;
+   height: 50px;
+   margin: 20px auto 30px;
    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   position: relative;
 }
 
 .blue-cool:hover {
@@ -97,11 +99,12 @@
    border: 2px solid #FFD700;
    font-size: 14px;
    margin-top: 10px;
-   left: 0;
-   width: 100%;
+   left: -2px;
+   width: calc(100% - 4px);
    /* Full width of the parent */
    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
    /*Shadow effect */
+   box-sizing: border-box;
 
 }
 
