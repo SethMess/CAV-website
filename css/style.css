@@ -45,7 +45,7 @@ nav ul li a {
 }
 
 .main-title {
-    background-image: url('../images/hero.jpg');
+    /* background-image: url('../images/hero.jpg'); */
     background-size: cover;
     color: black;
     padding: 2rem;

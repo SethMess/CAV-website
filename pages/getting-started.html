@@ -4,41 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/getting-started-style.css">
-    <link rel="stylesheet" href="../css/style.css"> <!-- Additional styles for About page -->
-    <title>About Us - CAV Club</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Getting Started - CAV Club</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+
+        .content {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        h3 {
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .resources {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource {
+            margin-bottom: 20px;
+        }
+
+        .resource h4 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .resource p {
+            margin: 0;
+        }
+
+        /* Links styling */
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .resources {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
-<header id="header-placeholder">
-
-</header>
-
 <body>
-    <li class="orange-cool">
-        <h1> Getting Started </h1>
-        <div class="dropdown-content">
-            <p>Welcome to the getting started page! There are two sections of resources that we have here: <br>
-                Autonomous Driving, and Communication resources <br> </p>
-            <p>If you want to learn about autonomous driving look under the autonomous driving <br>
-                section. This has information on building the car, and autonomous driving algorithms <br>
-                Learning ROS is a great place to start for this. <br></p>
-            <p>If you are more interested in researching the communication between vehicles, <br>
-                You can either start with learning about GNU Radio or NS3. <br></p>
-        </div>
-    </li>
-    <h2 class="orange-cool"> Autonomous Vehicle Learning Resources:</h2>
-    <li class="blue-cool"><a href="pages/ros.html">ROS (Robot Operating System) Tutorials</a></li>
-    <li class="blue-cool"><a href="pages/f1tenth.html">F1Tenth Course</a></li>
-    <h2 class="orange-cool"> Connected Vehicles Learning Resources </h2>
-    <li class="red-cool"><a href="pages/radio.html">GNU Radio and USRP</a></li>
-    <li class="red-cool"><a href="pages/ns3.html">NS3 (network simulator)</a></li>
-</body>
+    <header id="header-placeholder">
+        <!-- Header will be loaded here -->
+    </header>
 
-<body>
-    <!-- Page content -->
+    <main>
+        <section class="hero">
+            <h2>Getting Started with CAV Club</h2>
+            <p>Your journey into Autonomous and Connected Vehicles begins here.</p>
+        </section>
+
+        <section class="content">
+            <h3>Autonomous Vehicle Learning Resources</h3>
+            <p>Explore resources and tutorials to kickstart your journey in autonomous vehicle technology.</p>
+            <div class="resources">
+                <div class="resource">
+                    <h4><a href="./content/ros.html">ROS (Robot Operating System) Tutorials</a></h4>
+                    <p>Learn the basics and advanced topics of ROS, a key framework in robotics.</p>
+                </div>
+                <div class="resource">
+                    <h4><a href="./content/f1tenth.html">F1Tenth Course</a></h4>
+                    <p>Dive into autonomous racing with the F1Tenth platform, a 1/10th scale autonomous car.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <h3>Connected Vehicles Learning Resources</h3>
+            <p>Gain insights into the technologies that enable communication between vehicles and infrastructure.</p>
+            <div class="resources">
+                <div class="resource">
+                    <h4><a href="./content/gnuradio.html">GNU Radio and USRP</a></h4>
+                    <p>Explore the world of software-defined radio and how to use USRP hardware for various
+                        applications.</p>
+                </div>
+                <div class="resource">
+                    <h4><a href="./content/ns3.html">NS3 (Network Simulator)</a></h4>
+                    <p>Learn about NS3, a discrete-event network simulator for research and educational use.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 University of Victoria - ECE Department</p>
+    </footer>
     <script src="../js/loadHeader.js"></script>
     <script src="../js/script.js"></script>
-
 </body>
 
 </html>

@@ -23,7 +23,7 @@
     position: relative;
     max-width: 50%;
     /* Adjust as needed */
-    height: 700px;
+    height: 670px;
     /* Set a fixed height based on the tallest content (image or video) */
     overflow: hidden;
     /* Hide any overflow to maintain a consistent size */
