@@ -1,0 +1,43 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+.content {
+    padding: 20px;
+    margin: 20px;
+}
+
+.resource-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.resource-section h3 {
+    margin: 0 0 10px 0;
+    color: #0073e6;
+}
+
+.resource-section p {
+    margin: 0 0 10px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
