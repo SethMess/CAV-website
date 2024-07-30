@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CAV Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* 
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        } */
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 1rem;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 0.5rem;
+        }
+
+
+
+        .main-title {
+            /* background-image: url('../images/hero.jpg'); */
+            background-size: cover;
+            color: black;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+
+
+        .main-title,
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .main-title h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .main-title p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #0073e6;
+        }
+
+        .content h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .content a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Grid layout for timeline */
+        .timeline {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px 20px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .timeline-detail {
+            color: #555;
+        }
+
+        /* Grid layout for timeline with image */
+        .timeline-container {
+            display: grid;
+            grid-template-columns: auto 1fr 200px;
+            gap: 10px 20px;
+            margin-bottom: 30px;
+            align-items: start;
+        }
+
+        /* Timeline content styling */
+        .timeline {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px 20px;
+            text-align: left;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .timeline-detail {
+            color: #555;
+        }
+
+        /* Timeline image styling */
+        .timeline-image {
+            grid-column: 3 / 4;
+            text-align: center;
+        }
+
+        .timeline-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Title section styling */
+        .title-section {
+            background-color: #0073e6;
+            /* Dark background color */
+            padding: 20px;
+            text-align: center;
+            /* Center the text */
+        }
+
+        /* Title text styling */
+        .title-text {
+            color: white;
+            /* White text color */
+            font-size: 2em;
+            /* Larger font size */
+            margin: 0;
+            /* Remove default margins */
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main>
+        <section class="main-title">
+            <h2>Events - CAV Club</h2>
+            <p>Here you can find events that CAV club is hosting or participating in</p>
+        </section>
+
+        <section class="title-section">
+            <h2 class="title-text">AI Velocity Cup: F1Tenth Autonomous Racing Challenge</h2>
+        </section>
+        <section class="content">
+            <h3>12:30-13:30, on August 21 and August 22, 2024,<br>
+                Co-located with IEEE PACRIM 2024, David Strong Building.</h3>
+            <p><strong>Timeline:</strong></p>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-date">Registration:</div>
+                    <div class="timeline-detail">Aug. 1 to Aug. 16, 2024</div>
+
+                    <div class="timeline-date">Track setup:</div>
+                    <div class="timeline-detail">Aug. 20, 2024</div>
+
+                    <div class="timeline-date">Inspection time:</div>
+                    <div class="timeline-detail">9:30-12:00, Aug. 21, 2024</div>
+
+                    <div class="timeline-date">Time Trial:</div>
+                    <div class="timeline-detail">12:30-13:30, Aug. 21, 2024</div>
+
+                    <div class="timeline-date">Head to head race:</div>
+                    <div class="timeline-detail">12:30-13:30, Aug. 22, 2024</div>
+
+                    <div class="timeline-date">Award announcement:</div>
+                    <div class="timeline-detail">14:40, Aug. 22, 2024</div>
+                </div>
+                <div class="timeline-image">
+                    <img src="../images/ai_front_racecar_nobg.jpg" alt="Event Poster">
+                </div>
+            </div>
+            <!-- ai_front_racecar_nobg.png -->
+            <p><strong>Location:</strong> David Strong Building, University of Victoria<br>
+                <a href="https://www.uvic.ca/search/maps-buildings/buildings/david-strong.php">Map to David Strong
+                    Building</a><br>
+                <strong>Sponsor:</strong> IEEE Joint VTS/ComSoc Chapter, Victoria Section<br>
+                <strong>Contact:</strong> Lin Cai, <a href="mailto:cai@uvic.ca">cai@uvic.ca</a><br>
+            </p>
+            <p><strong>REGISTRATION:</strong> This competition is open to everyone of all levels, and everyone is
+                welcome to participate.
+                A team can consist of multiple teammates, and individual participants are also allowed. Teams competing
+                in-person need to provide and build an F1TENTH car themselves. To register in the 1st F1tenth Sim Racing
+                League, please refer to the Sim Racing Registration page.</p>
+            <p>The following Google form is only for preliminary registration and for orientation and information
+                sessions. Registration to IROS 2024 is expected for all competitors.</p>
+            <p><strong>Register Here: </strong><a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSe4K_VEiEB7H3pGsViBRmNjp-oDd1tL8OsXsWbiNoyzW6LjHw/viewform?usp=sf_link">AV
+                    Race Registration Form</a></p>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+
+</html>
