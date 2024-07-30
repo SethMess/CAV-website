@@ -17,6 +17,7 @@ body {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .resource-section h3 {
@@ -40,4 +41,10 @@ body {
 
 .button:hover {
     background-color: #005bb5;
+}
+
+.resource-section li {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    list-style-type: disc;
 }

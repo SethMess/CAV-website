@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tutorials.css">
+    <title>ROS Tutorials - CAV Club</title>
+</head>
+
+<body>
+    <header id="header-placeholder">
+        <!-- Header will be loaded here -->
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>GNU Radio Tutorial</h2>
+            <p>This page has info on how to go through the GNU Radio tutorials wiki.</p>
+            <li> <a href="https://wiki.gnuradio.org/index.php/Tutorials" class="button">GNU Radio Tutorials</a></li>
+        
+        </section>
+
+        <section class="content">
+            <article class="resource-section">
+                <h3>Beginner GNU Radio tutorials</h3>
+                <li> Introducing GNU Radio has information on GNU Radio and the installation process.</li>
+                <li> Flowgraph Fundamentals gets you started understanding flowgraphs</li>
+                <li> Creating and Modifying Python Blocks. This section teaches you how to make your own blocks for GNU Radio flowgaphs. (make sure you know where the python blocks are being saved so you can open the files and edit it with your favourite text editor).</li>
+                <li> The DSP blocks section introduces some blocks useful for digital signal processing.</li>
+            </article>
+
+            <article class="resource-section">
+                <h3>Intermediate/Advanced GNU Radio tutorials</h3>
+                <li>Read through PMTs, message passing, virtual sources and virtual sinks. These are important when making complex flowgraphs.</li>
+                <li>Mod and Demod section teaches you about different modulation and demodulation techniques such as QPSK, BPSK. It also teaches about multiplexing like OFDM (orthogonal frequency division multiplexing).</li>
+                <a href="ros-setup.html" class="button">Read More</a>
+            </article>
+
+            <article class="resource-section">
+                <h3>Using an SDR with GNU Radio</h3>
+                <p>An SDR can be a receiver or a transceiver. Using an SDR with GNU Radio you can receive signals and maybe even transmit signals.<br>
+                   Some SDRs are quite expensive, for example, Ettus Research's USRP. You can get a cheaper one like the RTL SDR. The RTL SDR will cost <br>
+                   around $50. Note that the RTL SDR is just a receiver, it cannot transmit signals.</p>
+                <li>Start with the hardware tutorial to listen for signals. Then you can find a tutorial online about how to make a FM receiver with your specific SDR.</li>
+                <a href="https://wiki.gnuradio.org/index.php?title=Guided_Tutorial_Hardware_Considerations" class="button">Read More</a>
+            </article>
+
+            <article class="resource-section">
+                <h3>Jack's github for GNU Radio</h3>
+                <p>Here is my github with gnuradio flowgraphs. They are .grc files that you can download. and run with the gnuradio companion.</p>
+                <a href="https://github.com/jhenker/GNUradio" class="button">Read More</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 University of Victoria - ECE Department</p>
+    </footer>
+    <script src="/js/loadHeader.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
