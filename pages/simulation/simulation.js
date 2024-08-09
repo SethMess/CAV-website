@@ -14,7 +14,7 @@ function setup() {
     createLoopMap();
 
     // LiDAR
-    lidar = new LiDAR(car, 300, 20);
+    lidar = new LiDAR(car, 500, 20);
 }
 
 function preload() {
@@ -72,9 +72,9 @@ function wallFollowingAlgorithm() {
     let turnSpeed = 0.03; // Base turn speed
 
     // Turn faster if the car is closer to the wall
-    if (distances.left < 75) {
+    if (distances.left < 65) {
         car.turn(turnSpeed * (75 / distances.left));  // Turn right more sharply
-    } else if (distances.right < 75) {
+    } else if (distances.right < 65) {
         car.turn(-turnSpeed * (75 / distances.right));  // Turn left more sharply
     }
 
@@ -148,7 +148,7 @@ class LiDAR {
         this.distances = { left: Infinity, right: Infinity };
 
         // Define a wider angle range for more readings
-        let angleRange = PI * 3 / 4; // 90 degrees in total (45 degrees to the left and right)
+        let angleRange = PI * 6 / 4; // 90 degrees in total (45 degrees to the left and right)
 
         // Adjust for finer resolution and wider angle range
         for (let i = -angleRange / 2; i <= angleRange / 2; i += angleRange / this.resolution) {
