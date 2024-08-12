@@ -6,6 +6,9 @@ let carImage;
 let speedSlider;
 let algorithmSelector;
 let positionButton;
+let obsticleButton;
+let obstacleMode = false;
+
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -37,7 +40,59 @@ function setup() {
     positionButton = createButton('Reset Position');
     positionButton.position(10, 90);
     positionButton.mousePressed(resetCarPosition);
+
+    //obsticle button
+    obsticleButton = createButton('Add Obsticle Toggle');
+    obsticleButton.position(10, 130);
+    obsticleButton.mousePressed(toggleObstacleMode);
 }
+
+function toggleObstacleMode() {
+    obstacleMode = !obstacleMode;
+    obsticleButton.html("Obstacle Mode: " + (obstacleMode ? "Enabled" : "Disabled"));
+}
+
+function mousePressed() {
+    if (obstacleMode) {
+        // Check if the mouse is within the button's bounds
+        if (mouseX < obsticleButton.position().x || mouseX > obsticleButton.position().x + obsticleButton.width ||
+            mouseY < obsticleButton.position().y || mouseY > obsticleButton.position().y + obsticleButton.height) {
+
+            // Add a small obstacle where the mouse was clicked
+            let size = 50;
+            // let obstacle = new SquareObstacle(mouseX, mouseY, size);
+            let x = mouseX;
+            let y = mouseY;
+            walls.push(new Boundary(x - size / 2, y - size / 2, x + size / 2, y - size / 2));
+            walls.push(new Boundary(x + size / 2, y - size / 2, x + size / 2, y + size / 2));
+            walls.push(new Boundary(x + size / 2, y + size / 2, x - size / 2, y + size / 2));
+            walls.push(new Boundary(x - size / 2, y + size / 2, x - size / 2, y - size / 2));
+            // walls.push(obstacle);
+        }
+    }
+}
+
+class SquareObstacle {
+    constructor(x, y, size) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.boundaries = [
+            new Boundary(x - size / 2, y - size / 2, x + size / 2, y - size / 2),
+            new Boundary(x + size / 2, y - size / 2, x + size / 2, y + size / 2),
+            new Boundary(x + size / 2, y + size / 2, x - size / 2, y + size / 2),
+            new Boundary(x - size / 2, y + size / 2, x - size / 2, y - size / 2)
+        ];
+    }
+
+    show() {
+        for (let boundary of this.boundaries) {
+            boundary.show();
+        }
+    }
+}
+
+
 
 function preload() {
     // Load the car image before setting up the canvas
@@ -113,24 +168,25 @@ function wallFollowingAlgorithm(speed) {
         }
     }
 
-    // Find the minimum distance in each region
-    let minLeftDist = min(leftDistances);
-    let minRightDist = min(rightDistances);
-    let minFrontDist = min(frontDistances);
+    // Find the minimum distance in each region, default to a large number if empty
+    let minLeftDist = leftDistances.length > 0 ? Math.min(...leftDistances) : Infinity;
+    let minRightDist = rightDistances.length > 0 ? Math.min(...rightDistances) : Infinity;
+    let minFrontDist = frontDistances.length > 0 ? Math.min(...frontDistances) : Infinity;
 
     let turnSpeed = 0.03;
+    let cornerTurnSpeed = 0.1; // Higher turn speed for corner detection
 
     // Wall-following logic
-    if (minFrontDist < 75) {
+    if (minFrontDist < 100) {
         // If there's an obstacle in front, prioritize turning to avoid it
         if (minLeftDist > minRightDist) {
-            car.turn(turnSpeed);  // Turn right if left is clearer
+            car.turn(cornerTurnSpeed);  // Turn right if left is clearer
         } else {
-            car.turn(-turnSpeed);  // Turn left if right is clearer
+            car.turn(-cornerTurnSpeed);  // Turn left if right is clearer
         }
-    } else if (minLeftDist < 75) {
+    } else if (minLeftDist < 40) {
         car.turn(turnSpeed);  // Turn right if left wall is too close
-    } else if (minRightDist < 75) {
+    } else if (minRightDist < 40) {
         car.turn(-turnSpeed);  // Turn left if right wall is too close
     }
 
@@ -138,6 +194,7 @@ function wallFollowingAlgorithm(speed) {
 }
 
 
+//Make this one the current wall following algorithm and change that one to PID
 function gapFollowingAlgorithm(speed) {
     // Implement gap-following logic here
     // For now, let's keep the car moving straight as a placeholder
@@ -465,6 +522,9 @@ class LiDAR {
     castRay(angle, walls) {
         let ray = { x: this.car.pos.x, y: this.car.pos.y, angle: angle, dist: this.range };
         let end = p5.Vector.fromAngle(angle).setMag(this.range).add(this.car.pos);
+        ray.x = end.x;
+        ray.y = end.y;
+
         for (let wall of walls) {
             let pt = this.cast(wall.a, wall.b, this.car.pos, end);
             if (pt) {
@@ -490,6 +550,7 @@ class LiDAR {
                 a.y + t * (b.y - a.y)
             );
         }
+
         return null;
     }
 

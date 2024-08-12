@@ -81,12 +81,12 @@
             <h3>Autonomous Vehicle Learning Resources</h3>
             <p>Explore resources and tutorials to kickstart your journey in autonomous vehicle technology.</p>
             <div class="resources">
-                <div class="blue-cool">
+                <div id="button_ros" class="blue-cool">
                     <h4><a href="./content/ros.html">ROS (Robot Operating System) Tutorials</a></h4>
                     <p class="dropdown-content">Learn the basics and advanced topics of ROS, a key framework in
                         robotics.</p>
                 </div>
-                <div class="blue-cool"">
+                <div id="button_f1tenth" class="blue-cool"">
                     <h4><a href=" ./content/f1tenth.html">F1Tenth Course</a></h4>
                     <p class="dropdown-content">Dive into autonomous racing with the F1Tenth platform, a 1/10th scale
                         autonomous car.</p>
@@ -98,13 +98,13 @@
             <h3>Connected Vehicles Learning Resources</h3>
             <p>Gain insights into the technologies that enable communication between vehicles and infrastructure.</p>
             <div class="resources">
-                <div class="blue-cool">
+                <div id="button_gnuradio" class="blue-cool">
                     <h4><a href="./content/gnuradio.html">GNU Radio and USRP</a></h4>
                     <p class="dropdown-content">Explore the world of software-defined radio and how to use USRP hardware
                         for various
                         applications.</p>
                 </div>
-                <div class="blue-cool">
+                <div id="button_ns3" class="blue-cool">
                     <h4><a href="./content/ns3.html">NS3 (Network Simulator)</a></h4>
                     <p class="dropdown-content">Learn about NS3, a discrete-event network simulator for research and
                         educational use.</p>
@@ -118,6 +118,23 @@
     </footer>
     <script src="../js/loadHeader.js"></script>
     <script src="../js/script.js"></script>
+    <script>
+        document.getElementById('button_ros').addEventListener('click', function () {
+            window.location.href = './content/ros.html';
+        });
+
+        document.getElementById('button_f1tenth').addEventListener('click', function () {
+            window.location.href = './content/f1tenth.html';
+        });
+
+        document.getElementById('button_gnuradio').addEventListener('click', function () {
+            window.location.href = './content/gnuradio.html';
+        });
+
+        document.getElementById('button_ns3').addEventListener('click', function () {
+            window.location.href = './content/ns3.html';
+        });
+    </script>
 </body>
 
 </html>
